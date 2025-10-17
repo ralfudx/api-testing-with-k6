@@ -2,14 +2,10 @@ import { Counter, Trend } from "k6/metrics";
 import { check } from "k6";
 import { generateTimestamp } from "./data.js";
 
-export let bfx_url = `https://services-staging.tradebfx.com`;
-export let api_url = `https://api-staging.bitpesa.co/v1`;
-export let api_key = `HhHFLqJcX8VYkyKK5PqwAATFaN5LdScsILjLWi1NiV6Mfs+AMQUIKeHBthSBAxweh0ibaJ0vLLZRIDFF87Sduw==`;
-export let api_secret = `WEUPNQEzfznymW3r1jX8n+IFmUWi+FVh9L5eXVot6Ed57FsKsLYrrA7MwDEb5pbkuJPYcwdFVALoWfZ/5EFdWg==`;
-// export let bfx_url = `${__ENV.BFX_URL}`;
-// export let api_url = `${__ENV.API_URL}`;
-// export let api_key = `${__ENV.API_KEY}`;
-// export let api_secret = `${__ENV.API_SECRET}`;
+export let bfx_url = `${__ENV.BFX_URL}`;
+export let api_url = `${__ENV.API_URL}`;
+export let api_key = `${__ENV.API_KEY}`;
+export let api_secret = `${__ENV.API_SECRET}`;
 
 export let timestamp = generateTimestamp();
 export let timeout = 420000
